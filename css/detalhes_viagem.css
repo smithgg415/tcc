@@ -1,0 +1,186 @@
+:root {
+    --bg-light: #f0f0f0;
+    --text-dark: #000;
+    --accent: #e53935;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Righteous', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.trip-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.trip-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.trip-header h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--text-dark);
+}
+
+.trip-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.trip-section {
+    padding: 2rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.trip-section:last-child {
+    border-bottom: none;
+}
+
+.detail-item {
+    display: flex;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+}
+
+.detail-icon {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    color: var(--text-dark);
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.detail-content {
+    flex: 1;
+}
+
+.detail-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666;
+    margin-bottom: 0.25rem;
+}
+
+.detail-value {
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.status-confirmed {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-pending {
+    background-color: #fff8e1;
+    color: #ff8f00;
+}
+
+.status-canceled {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.rating-stars {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.rating-stars .star {
+    color: #ffc107;
+    margin-right: 0.25rem;
+    font-size: 1.2rem;
+}
+
+.rating-comment {
+    background: rgba(0,0,0,0.02);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    font-style: italic;
+    margin-top: 1rem;
+    border-left: 3px solid rgba(0,0,0,0.1);
+}
+
+.btn-evaluate {
+    background: var(--text-dark);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    font-family: 'Righteous', sans-serif;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-evaluate:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    transition: var(--transition);
+}
+
+.btn-back:hover {
+    color: var(--accent);
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 1.5rem 1rem;
+    }
+    
+    .trip-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .trip-section {
+        padding: 1.5rem;
+    }
+}
